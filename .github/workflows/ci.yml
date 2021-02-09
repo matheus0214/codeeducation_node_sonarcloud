@@ -1,0 +1,20 @@
+name: test-application-node
+on:
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  application:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set NodeJs
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.19.0
+      - name: Install packages
+        run: npm install
+      - name: Run tests
+        run: npm run test
