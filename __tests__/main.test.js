@@ -1,4 +1,4 @@
-const { sum_values, multiply_values } = require("../main");
+const { sum_values, multiply_values } = require("../src/main");
 
 describe("Arithimetic", () => {
     it("should return sum for tow number", () => {
